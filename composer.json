@@ -1,5 +1,6 @@
 {
     "name": "ully/cloudstorages",
+    "version": "0.0.1",
     "authors": [
         {
             "name": "ulngollm",
@@ -11,5 +12,6 @@
             "Ulngollm\\Cloudstorages\\": "src/"
         }
     },
+    "minimum-stability": "dev",
     "require": {}
 }
