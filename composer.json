@@ -1,0 +1,15 @@
+{
+    "name": "ully/cloudstorages",
+    "authors": [
+        {
+            "name": "ulngollm",
+            "email": "ulngollm@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Ulngollm\\Cloudstorages\\": "src/"
+        }
+    },
+    "require": {}
+}
