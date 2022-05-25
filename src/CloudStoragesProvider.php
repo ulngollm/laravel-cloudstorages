@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace Ully\Cloudstorages;
 
 use Ully\Cloudstorages\Services\Router;
 use Illuminate\Support\ServiceProvider;
