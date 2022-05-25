@@ -30,6 +30,9 @@ class CloudStoragesProvider extends ServiceProvider
         $this->publishes([
             __DIR__ . '/config/storages.php' => config_path('storages.php'),
         ]);
+
+        $this->loadRoutesFrom(__DIR__.'/routes/api.php');
+
         $this->app->when(Router::class)
             ->needs('$drivers')
             ->giveConfig('storages.driver');
