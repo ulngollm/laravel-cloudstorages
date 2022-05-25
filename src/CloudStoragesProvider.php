@@ -34,6 +34,7 @@ class CloudStoragesProvider extends ServiceProvider
         $this->registerMigrations();
         $this->registerServices();
         $this->registerGate();
+        $this->registerView();
 
     }
 
@@ -80,5 +81,10 @@ class CloudStoragesProvider extends ServiceProvider
             ->group(function () {
                 $this->loadRoutesFrom(__DIR__ . '/routes/api.php');
             });
+    }
+
+    public function registerView()
+    {
+        $this->loadViewsFrom(__DIR__.'resources/views', 'storages');
     }
 }
