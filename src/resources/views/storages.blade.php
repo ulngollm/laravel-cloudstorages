@@ -2,7 +2,7 @@
 @section('content')
     <div class="files">
         @foreach($storages as $storage)
-            <x-storage :storage="$storage"></x-storage>
+            <x-cloud-storage :storage="$storage"></x-cloud-storage>
         @endforeach
         <a href="#" class="btn btn-primary text-decoration-none js-add" data-bs-toggle="modal"
            data-bs-target="#modal">

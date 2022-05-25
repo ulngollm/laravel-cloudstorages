@@ -89,7 +89,7 @@ class CloudStoragesProvider extends ServiceProvider
     {
         $this->loadViewsFrom(__DIR__.'/resources/views', 'cloudstorages');
         $this->publishes([
-            __DIR__.'/resources/views' => resource_path('views/cloudstorages'),
+            __DIR__.'/resources/views' => resource_path('views/vendor/cloudstorages'),
         ]);
         Blade::component('cloud-file', File::class);
         Blade::component('cloud-storage', Storage::class);
