@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Ully\Cloudstorages\Services\Router;
 use Illuminate\Support\ServiceProvider;
 
 class CloudStoragesProvider extends ServiceProvider
@@ -26,5 +27,8 @@ class CloudStoragesProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/../config/storages.php' => config_path('st.php'),
         ]);
+        $this->app->when(Router::class)
+            ->needs('$drivers')
+            ->giveConfig('storages.driver');
     }
 }
