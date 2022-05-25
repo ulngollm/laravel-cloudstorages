@@ -5,7 +5,13 @@ use App\Http\Services\ExternalStorage\YaDiskStorage;
 use App\Models\TokenStorageCredentials;
 
 return [
-    'driver' => [
+    'config' => [
+        'routes' => [
+            'prefix' => 'api/storages'
+        ]
+    ],
+
+    'drivers' => [
         'ya_disk' => [
             'name' => 'Яндекс Диск', //название, которое будет отображаться пользователю
             'handler' => YaDiskStorage::class,
