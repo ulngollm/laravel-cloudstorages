@@ -29,18 +29,26 @@ class CloudStoragesProvider extends ServiceProvider
      */
     public function boot()
     {
-        Gate::define('access-storage', function (User $user, Storage $storage) {
-            return $storage->user->id === $user->id;
-        });
-
-        $this->publishes([
-            __DIR__ . '/config/storages.php' => config_path('storages.php'),
-        ]);
-
+        $this->registerConfig();
         $this->registerRoutes();
         $this->registerMigrations();
         $this->registerServices();
+        $this->registerGate();
 
+    }
+
+    protected function registerConfig()
+    {
+        $this->publishes([
+            __DIR__ . '/config/storages.php' => config_path('storages.php'),
+        ]);
+    }
+
+    protected function registerGate()
+    {
+        Gate::define('access-storage', function (User $user, Storage $storage) {
+            return $storage->user->id === $user->id;
+        });
     }
 
     protected function registerServices()
