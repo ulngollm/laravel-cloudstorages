@@ -3,9 +3,9 @@
 namespace Ully\Cloudstorages\Controllers;
 
 use App\Http\Controllers\Controller;
-use App\Models\Storage;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Http\Request;
+use Ully\Cloudstorages\Models\Storage;
 use Ully\Cloudstorages\Services\DTO\NewStorage;
 use Ully\Cloudstorages\Services\Storages;
 

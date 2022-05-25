@@ -2,12 +2,12 @@
 
 namespace Ully\Cloudstorages\Services;
 
-use App\Models\Storage;
-use App\Models\StorageCredentials;
-use App\Models\TokenStorageCredentials;
 use Arhitector\Yandex\Client\Stream\Factory;
 use Arhitector\Yandex\Disk;
 use Illuminate\Support\LazyCollection;
+use Ully\Cloudstorages\Models\Storage;
+use Ully\Cloudstorages\Models\StorageCredentials;
+use Ully\Cloudstorages\Models\TokenStorageCredentials;
 use Ully\Cloudstorages\Services\Responses\ExternalFilesCollection;
 use Ully\Cloudstorages\Services\Responses\YaDisk\DownloadedFile;
 use Ully\Cloudstorages\Services\Responses\YaDisk\FilesCollection;

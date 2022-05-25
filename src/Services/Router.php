@@ -2,8 +2,8 @@
 
 namespace Ully\Cloudstorages\Services;
 
-use App\Models\Storage;
 use Illuminate\Support\Arr;
+use Ully\Cloudstorages\Models\Storage;
 
 class Router
 {

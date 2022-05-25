@@ -2,7 +2,7 @@
 
 namespace Ully\Cloudstorages\Services;
 
-use App\Models\StorageCredentials;
+use Ully\Cloudstorages\Models\StorageCredentials;
 use Ully\Cloudstorages\Services\Responses\DownloadedFile;
 use Ully\Cloudstorages\Services\Responses\ExternalFilesCollection;
 

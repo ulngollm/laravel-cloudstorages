@@ -2,10 +2,10 @@
 
 namespace Ully\Cloudstorages\Services;
 
-use App\Models\Storage;
-use App\Models\StorageType;
 use App\Models\User;
 use Illuminate\Support\Collection;
+use Ully\Cloudstorages\Models\Storage;
+use Ully\Cloudstorages\Models\StorageType;
 use Ully\Cloudstorages\Services\DTO\NewStorage;
 use Ully\Cloudstorages\Services\Responses\DownloadedFile;
 use Ully\Cloudstorages\Services\Responses\ExternalFilesCollection;

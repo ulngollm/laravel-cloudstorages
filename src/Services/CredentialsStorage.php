@@ -2,9 +2,9 @@
 
 namespace Ully\Cloudstorages\Services;
 
-use App\Models\Storage;
-use App\Models\StorageCredentials;
 use Illuminate\Support\Arr;
+use Ully\Cloudstorages\Models\Storage;
+use Ully\Cloudstorages\Models\StorageCredentials;
 
 class CredentialsStorage
 {

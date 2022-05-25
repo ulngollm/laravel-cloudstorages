@@ -1,7 +1,7 @@
 <?php
 
 
-use App\Models\TokenStorageCredentials;
+use Ully\Cloudstorages\Models\TokenStorageCredentials;
 use Ully\Cloudstorages\Services\YaDiskStorage;
 
 return [

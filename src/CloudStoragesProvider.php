@@ -2,13 +2,13 @@
 
 namespace Ully\Cloudstorages;
 
-use App\Models\Storage;
 use App\Models\User;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\ServiceProvider;
+use Ully\Cloudstorages\Models\Storage;
 use Ully\Cloudstorages\Services\CredentialsStorage;
 use Ully\Cloudstorages\Services\Router;
-use Illuminate\Support\ServiceProvider;
 
 class CloudStoragesProvider extends ServiceProvider
 {

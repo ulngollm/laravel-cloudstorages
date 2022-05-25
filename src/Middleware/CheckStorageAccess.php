@@ -2,10 +2,9 @@
 
 namespace Ully\Cloudstorages\Middleware;
 
-use App\Models\Storage;
 use Closure;
-use Illuminate\Support\Facades\Gate;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Gate;
 
 class CheckStorageAccess
 {
