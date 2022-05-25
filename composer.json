@@ -9,9 +9,16 @@
     ],
     "autoload": {
         "psr-4": {
-            "Ulngollm\\Cloudstorages\\": "src/"
+            "Ully\\Cloudstorages\\": "src/"
         }
     },
     "minimum-stability": "dev",
-    "require": {}
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Ully\\Cloudstorages\\CloudStoragesProvider"
+            ]
+        }
+    }
 }
