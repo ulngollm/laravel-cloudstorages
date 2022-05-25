@@ -26,7 +26,7 @@ class File extends Component
      */
     public function render()
     {
-        return view('components.file', [
+        return view('cloudstorages::components.file', [
             'file' => $this->file
         ]);
     }

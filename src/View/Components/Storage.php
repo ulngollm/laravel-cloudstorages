@@ -24,7 +24,7 @@ class Storage extends Component
      */
     public function render()
     {
-        return view('components.storage', [
+        return view('cloudstorages::components.storage', [
             'storage' => $this->storage
         ]);
     }
