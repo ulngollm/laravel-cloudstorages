@@ -1,9 +1,9 @@
 <div class="card">
     <div class="card-header">
-        @include('layout.filter')
+        @include('cloudstorages::layout.filter')
     </div>
     <div class="card-body">
-        @include('layout.nav')
+        @include('cloudstorages::layout.nav')
         <div class="card-text py-4">
             @yield('content')
         </div>

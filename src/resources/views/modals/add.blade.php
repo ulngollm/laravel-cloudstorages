@@ -1,4 +1,4 @@
-@extends('modals.layout')
+@extends('cloudstorages::modals.layout')
 
 @section('header')
     <div class="d-flex">

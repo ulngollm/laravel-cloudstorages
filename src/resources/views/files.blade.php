@@ -1,4 +1,4 @@
-@extends('layout.layout')
+@extends('cloudstorages::layout.layout')
 @section('content')
     <div class="files">
         @foreach($files as $file)
