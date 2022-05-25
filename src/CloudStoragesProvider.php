@@ -58,7 +58,7 @@ class CloudStoragesProvider extends ServiceProvider
             ->giveConfig('storages.drivers');
         $this->app->when(CredentialsStorage::class)
             ->needs('$drivers')
-            ->giveConfig('storages.driver');
+            ->giveConfig('storages.drivers');
 
     }
 
