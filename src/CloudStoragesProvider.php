@@ -25,7 +25,7 @@ class CloudStoragesProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__.'/config/storages.php' => config_path('stor.php'),
+            __DIR__.'/config/storages.php' => config_path('storages.php'),
         ]);
         $this->app->when(Router::class)
             ->needs('$drivers')
