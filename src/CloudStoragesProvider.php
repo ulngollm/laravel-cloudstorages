@@ -7,10 +7,10 @@ use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
-use Ully\Cloudstorages\Models\Storage;
 use Ully\Cloudstorages\Services\CredentialsStorage;
 use Ully\Cloudstorages\Services\Router;
 use Ully\Cloudstorages\View\Components\File;
+use Ully\Cloudstorages\View\Components\Storage;
 
 class CloudStoragesProvider extends ServiceProvider
 {
