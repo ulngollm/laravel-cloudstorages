@@ -1,8 +1,8 @@
 <?php
 
 
-use App\Http\Services\ExternalStorage\YaDiskStorage;
 use App\Models\TokenStorageCredentials;
+use Ully\Cloudstorages\Services\YaDiskStorage;
 
 return [
     'config' => [

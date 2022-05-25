@@ -3,11 +3,11 @@
 namespace Ully\Cloudstorages\Controllers;
 
 use App\Http\Controllers\Controller;
-use App\Http\Services\ExternalStorage\Storages;
-use App\Http\Services\ExternalStorage\DTO\NewStorage;
 use App\Models\Storage;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Http\Request;
+use Ully\Cloudstorages\Services\DTO\NewStorage;
+use Ully\Cloudstorages\Services\Storages;
 
 class StorageController extends Controller
 {

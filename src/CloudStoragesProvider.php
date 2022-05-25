@@ -6,6 +6,7 @@ use App\Models\Storage;
 use App\Models\User;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Route;
+use Ully\Cloudstorages\Services\CredentialsStorage;
 use Ully\Cloudstorages\Services\Router;
 use Illuminate\Support\ServiceProvider;
 
@@ -38,10 +39,18 @@ class CloudStoragesProvider extends ServiceProvider
 
         $this->registerRoutes();
         $this->registerMigrations();
+        $this->registerServices();
 
+    }
+
+    protected function registerServices()
+    {
         $this->app->when(Router::class)
             ->needs('$drivers')
             ->giveConfig('storages.drivers');
+        $this->app->when(CredentialsStorage::class)
+            ->needs('$drivers')
+            ->giveConfig('storages.driver');
 
     }
 
