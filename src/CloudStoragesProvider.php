@@ -3,12 +3,14 @@
 namespace Ully\Cloudstorages;
 
 use App\Models\User;
+use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 use Ully\Cloudstorages\Models\Storage;
 use Ully\Cloudstorages\Services\CredentialsStorage;
 use Ully\Cloudstorages\Services\Router;
+use Ully\Cloudstorages\View\Components\File;
 
 class CloudStoragesProvider extends ServiceProvider
 {
@@ -85,6 +87,11 @@ class CloudStoragesProvider extends ServiceProvider
 
     public function registerView()
     {
-        $this->loadViewsFrom(__DIR__.'resources/views', 'storages');
+        $this->loadViewsFrom(__DIR__.'/resources/views', 'cloudstorages');
+        $this->publishes([
+            __DIR__.'/resources/views' => resource_path('views/cloudstorages'),
+        ]);
+        Blade::component('cloud-file', File::class);
+        Blade::component('cloud-storage', Storage::class);
     }
 }

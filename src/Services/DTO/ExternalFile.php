@@ -9,7 +9,7 @@ abstract class ExternalFile
         public string  $type,
         public string  $name,
         public string  $path,
-        public ?string $media_type = null,
+        public ?string $mediaType = null,
         public ?string $mimeType = null,
         public ?string $preview = null,
         public ?string $file = null

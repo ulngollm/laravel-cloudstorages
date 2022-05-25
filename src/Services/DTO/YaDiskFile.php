@@ -14,7 +14,7 @@ class YaDiskFile extends ExternalFile
             type: $item['type'],
             name: $item['name'],
             path: Str::of($item['path'])->remove('disk:') ?? null,//удалить disk:
-            media_type: $item['media_type'] ?? null,
+            mediaType: $item['media_type'] ?? null,
             mimeType: $item['mime_type'] ?? null,
             preview: $item['preview'] ?? null,
             file: $item['file'] ?? null
