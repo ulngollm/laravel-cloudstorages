@@ -37,11 +37,23 @@ class CloudStoragesProvider extends ServiceProvider
         ]);
 
         $this->registerRoutes();
+        $this->registerMigrations();
 
         $this->app->when(Router::class)
             ->needs('$drivers')
             ->giveConfig('storages.drivers');
 
+    }
+
+    protected function registerMigrations()
+    {
+        $this->loadMigrationsFrom(__DIR__ . '/database/migrations');
+        $this->publishes([
+            __DIR__ . '/database/migrations/' => database_path('migrations')
+        ], 'storages-migrations');
+        $this->publishes([
+            __DIR__ . '/database/seeders/StorageTypeSeeder.php' => database_path('seeders'),
+        ], 'storages-seeds');
     }
 
     protected function registerRoutes()
