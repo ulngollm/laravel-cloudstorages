@@ -1,10 +1,10 @@
 <?php
 
-namespace Ully\Cloudstorages\Services;
+namespace App\Http\Services\ExternalStorage;
 
-use Ully\Cloudstorages\Models\StorageCredentials;
-use Ully\Cloudstorages\Services\Responses\DownloadedFile;
-use Ully\Cloudstorages\Services\Responses\ExternalFilesCollection;
+use App\Http\Services\ExternalStorage\Responses\DownloadedFile;
+use App\Http\Services\ExternalStorage\Responses\ExternalFilesCollection;
+use App\Models\StorageCredentials;
 
 interface ExternalStorage
 {
@@ -13,7 +13,5 @@ interface ExternalStorage
     public function getFolderFiles(string $path): ExternalFilesCollection;
 
     public function getFile(string $path): DownloadedFile;
-
-    public function getCredentials(): StorageCredentials;
 
 }
