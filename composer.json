@@ -9,7 +9,8 @@
     ],
     "autoload": {
         "psr-4": {
-            "Ully\\Cloudstorages\\": "src/"
+            "Ully\\Cloudstorages\\": "src/",
+            "Ully\\Cloudstorages\\Database\\Seeders\\": "src/database/seeders/"
         }
     },
     "minimum-stability": "dev",

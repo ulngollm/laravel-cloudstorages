@@ -1,6 +1,6 @@
 <?php
 
-namespace Database\Seeders;
+namespace Ully\Cloudstorages\Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
