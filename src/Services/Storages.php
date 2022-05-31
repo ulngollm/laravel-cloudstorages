@@ -13,42 +13,35 @@ use Ully\Cloudstorages\Services\Responses\ExternalFilesCollection;
 class Storages
 {
     public function __construct(
-        private Router $router
+        private Router        $router,
+        private CommonStorage $storage
     )
     {
     }
 
     public function addStorage(InputStorage $data)
     {
-        $storage = Storage::create([
-            'label' => $data->label,
-            'user_id' => $data->user_id,
-            'type_id' => $data->driver
-        ]);
-        resolve(CredentialsStorage::class)->addCredentials($storage, $data->credentials);
-        return $storage;
+        return $this->storage->addStorage($data);
     }
 
     public function getList(User $user): Collection
     {
-        return $user->storages;
+        return $this->storage->getList($user);
     }
 
     public function renameStorage(Storage $storage, string $label): Storage
     {
-        $storage->label = $label;
-        $storage->save();
-        return $storage;
+        return $this->storage->renameStorage($storage, $label);
     }
 
     public function deleteStorage(Storage $storage): void
     {
-        $storage->delete();
+        $this->storage->deleteStorage($storage);
     }
 
-    public function getTypes()
+    public function getTypes(): Collection
     {
-        return StorageType::all();
+        return $this->storage->getTypes();
     }
 
     public function getFolderFiles(Storage $storage, string $path): ExternalFilesCollection
