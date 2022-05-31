@@ -1,6 +1,6 @@
 {
     "name": "ully/cloudstorages",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "authors": [
         {
             "name": "ulngollm",
@@ -13,7 +13,9 @@
         }
     },
     "minimum-stability": "dev",
-    "require": {},
+    "require": {
+        "arhitector/yandex": "dev-master"
+    },
     "extra": {
         "laravel": {
             "providers": [
