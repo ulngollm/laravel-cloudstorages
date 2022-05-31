@@ -5,7 +5,7 @@ namespace Ully\Cloudstorages\Services\DTO;
 use Arhitector\Yandex\Disk\AbstractResource;
 use Illuminate\Support\Str;
 
-class YaDiskFile extends ExternalFile
+class File extends ExternalFile
 {
     public static function from(AbstractResource $item): static
     {

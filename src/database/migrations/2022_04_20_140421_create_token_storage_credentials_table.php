@@ -22,6 +22,8 @@ return new class extends Migration
                 ->references('id')
                 ->on('storages')
                 ->onDelete('CASCADE');
+
+            $table->index('storage_id');
         });
     }
 

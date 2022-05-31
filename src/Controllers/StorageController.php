@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Http\Request;
 use Ully\Cloudstorages\Models\Storage;
-use Ully\Cloudstorages\Services\DTO\NewStorage;
+use Ully\Cloudstorages\Services\DTO\InputStorage;
 use Ully\Cloudstorages\Services\Storages;
 
 class StorageController extends Controller
@@ -27,7 +27,7 @@ class StorageController extends Controller
     {
         $user = $request->user();
 
-        $storage = NewStorage::fromRequest($request)->forUser($user);
+        $storage = InputStorage::fromRequest($request)->forUser($user);
         return $this->storages->addStorage($storage);
     }
 
