@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
+use Ully\Cloudstorages\Commands\UpdateDrivers;
 use Ully\Cloudstorages\Services\CredentialsStorage;
 use Ully\Cloudstorages\Services\Router;
 use Ully\Cloudstorages\View\Components\File;
@@ -37,6 +38,7 @@ class CloudStoragesProvider extends ServiceProvider
         $this->registerServices();
         $this->registerGate();
         $this->registerView();
+        $this->registerCommands();
 
     }
 
@@ -87,11 +89,20 @@ class CloudStoragesProvider extends ServiceProvider
 
     public function registerView()
     {
-        $this->loadViewsFrom(__DIR__.'/resources/views', 'cloudstorages');
+        $this->loadViewsFrom(__DIR__ . '/resources/views', 'cloudstorages');
         $this->publishes([
-            __DIR__.'/resources/views' => resource_path('views/vendor/cloudstorages'),
+            __DIR__ . '/resources/views' => resource_path('views/vendor/cloudstorages'),
         ]);
         Blade::component('cloud-file', File::class);
         Blade::component('cloud-storage', Storage::class);
+    }
+
+    public function registerCommands()
+    {
+        if ($this->app->runningInConsole()) {
+            $this->commands([
+                UpdateDrivers::class,
+            ]);
+        }
     }
 }
