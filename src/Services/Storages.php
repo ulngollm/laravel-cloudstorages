@@ -6,7 +6,7 @@ use App\Models\User;
 use Illuminate\Support\Collection;
 use Ully\Cloudstorages\Models\Storage;
 use Ully\Cloudstorages\Models\StorageType;
-use Ully\Cloudstorages\Services\DTO\NewStorage;
+use Ully\Cloudstorages\Services\DTO\InputStorage;
 use Ully\Cloudstorages\Services\Responses\DownloadedFile;
 use Ully\Cloudstorages\Services\Responses\ExternalFilesCollection;
 
@@ -18,7 +18,7 @@ class Storages
     {
     }
 
-    public function addStorage(NewStorage $data)
+    public function addStorage(InputStorage $data)
     {
         $storage = Storage::create([
             'label' => $data->label,

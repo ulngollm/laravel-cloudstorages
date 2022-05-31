@@ -6,7 +6,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 
 
-class NewStorage
+class InputStorage
 {
     public function __construct(
         public int    $driver,
