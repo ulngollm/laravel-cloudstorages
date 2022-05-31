@@ -13,7 +13,7 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/ulngollm/laravel-package-demo"
+            "url": "https://github.com/ulngollm/laravel-cloudstorages"
         }
     ]
 }
