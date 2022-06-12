@@ -2,6 +2,7 @@
 
 namespace Ully\Cloudstorages\Services;
 
+use App\Models\User;
 use Ully\Cloudstorages\Models\Storage;
 use Ully\Cloudstorages\Models\StorageType;
 use Ully\Cloudstorages\Services\DTO\InputStorage;

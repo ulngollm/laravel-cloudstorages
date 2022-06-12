@@ -8,10 +8,11 @@ use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 use Ully\Cloudstorages\Commands\UpdateDrivers;
+use Ully\Cloudstorages\Models\Storage;
 use Ully\Cloudstorages\Services\CredentialsStorage;
 use Ully\Cloudstorages\Services\Router;
 use Ully\Cloudstorages\View\Components\File;
-use Ully\Cloudstorages\View\Components\Storage;
+use Ully\Cloudstorages\View\Components\Storage as StorageComponent;
 
 class CloudStoragesProvider extends ServiceProvider
 {
@@ -94,7 +95,7 @@ class CloudStoragesProvider extends ServiceProvider
             __DIR__ . '/resources/views' => resource_path('views/vendor/cloudstorages'),
         ]);
         Blade::component('cloud-file', File::class);
-        Blade::component('cloud-storage', Storage::class);
+        Blade::component('cloud-storage', StorageComponent::class);
     }
 
     public function registerCommands()
