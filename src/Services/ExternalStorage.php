@@ -2,9 +2,9 @@
 
 namespace Ully\Cloudstorages\Services;
 
-use App\Http\Services\ExternalStorage\Responses\DownloadedFile;
-use App\Http\Services\ExternalStorage\Responses\ExternalFilesCollection;
-use App\Models\StorageCredentials;
+
+use Ully\Cloudstorages\Services\Responses\DownloadedFile;
+use Ully\Cloudstorages\Services\Responses\ExternalFilesCollection;
 
 interface ExternalStorage
 {

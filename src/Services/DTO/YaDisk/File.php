@@ -1,9 +1,10 @@
 <?php
 
-namespace Ully\Cloudstorages\Services\DTO;
+namespace Ully\Cloudstorages\Services\DTO\YaDisk;
 
 use Arhitector\Yandex\Disk\AbstractResource;
 use Illuminate\Support\Str;
+use Ully\Cloudstorages\Services\DTO\ExternalFile;
 
 class File extends ExternalFile
 {

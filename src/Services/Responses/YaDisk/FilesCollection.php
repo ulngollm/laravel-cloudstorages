@@ -4,7 +4,7 @@ namespace Ully\Cloudstorages\Services\Responses\YaDisk;
 
 use Arhitector\Yandex\Disk\AbstractResource;
 use Illuminate\Support\Collection;
-use Ully\Cloudstorages\Services\DTO\File;
+use Ully\Cloudstorages\Services\DTO\YaDisk\File;
 use Ully\Cloudstorages\Services\Responses\ExternalFilesCollection;
 
 class FilesCollection extends ExternalFilesCollection

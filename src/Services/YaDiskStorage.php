@@ -2,13 +2,14 @@
 
 namespace Ully\Cloudstorages\Services;
 
-use App\Http\Services\ExternalStorage\Responses\ExternalFilesCollection;
-use App\Http\Services\ExternalStorage\Responses\YaDisk\DownloadedFile;
-use App\Http\Services\ExternalStorage\Responses\YaDisk\FilesCollection;
-use App\Models\Storage;
+
 use Arhitector\Yandex\Client\Stream\Factory;
 use Arhitector\Yandex\Disk;
 use Illuminate\Support\LazyCollection;
+use Ully\Cloudstorages\Models\Storage;
+use Ully\Cloudstorages\Services\Responses\YaDisk\DownloadedFile;
+use Ully\Cloudstorages\Services\Responses\ExternalFilesCollection;
+use Ully\Cloudstorages\Services\Responses\YaDisk\FilesCollection;
 
 class YaDiskStorage implements ExternalStorage
 {
