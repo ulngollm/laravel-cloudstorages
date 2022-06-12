@@ -15,7 +15,7 @@ class StorageTypeSeeder extends Seeder
      */
     public function run()
     {
-        $drivers = config('storages.driver');
+        $drivers = config('storages.drivers');
 
         DB::table('storage_types')->insertOrIgnore(
             collect($drivers)->keys()
