@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Services\ExternalStorage;
+namespace Ully\Cloudstorages\Services;
 
 use App\Http\Services\ExternalStorage\Responses\DownloadedFile;
 use App\Http\Services\ExternalStorage\Responses\ExternalFilesCollection;
