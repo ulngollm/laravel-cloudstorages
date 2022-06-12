@@ -35,6 +35,8 @@ php artisan vendor:publish --provider="Ully\Cloudstorages\CloudStoragesProvider"
 
 API доступен по эндпоинтам с префиксом `/api/storages`.
 
+Спецификация API доступна на [SwaggerHub](https://app.swaggerhub.com/apis/ulngollm/lms_disk_api/1.0.2)
+
 Конфигурация сервиса находится в `config/storages.php`. Там перечислены поддерживаемые типы хранилищ.
 На данный момент реализована только поддержка Яндекс Диска.
 
